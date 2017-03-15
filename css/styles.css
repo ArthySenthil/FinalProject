@@ -1,0 +1,400 @@
+
+/* ==========================================================================
+BASE STYLES
+========================================================================== */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  /*font: 16px/1 sans-serif;*/
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
+}
+
+h1 {
+  font-size:250%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size:175%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 1em 0;
+}
+
+h3 {
+  font-size:150%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 1em 0;
+}
+
+h4 {
+  font-size:120%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 1em 0;
+}
+
+p {
+  font-size:120%;
+  line-height: 1.6;
+  margin-bottom: 2em;
+  font-weight: 300;
+}
+
+p.small-txt {
+  font-size: 80%;
+}
+
+table {
+  font-size:120%;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+a,
+button {
+  color: inherit;
+  transition: .3s;
+}
+a {
+
+  text-decoration: underline;
+  color:#0000EE;
+}
+
+/*a:visited { color: #551A8B; }*/
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+
+.wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+
+
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+
+/* ==========================================================================
+HEADER 
+========================================================================== */
+
+
+header {
+  background-image: url(../img/book-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*position: relative;*/
+  margin: 0;
+  color: #2F4F4F;
+
+  text-align: center;
+  /*min-height: 80vh;*/
+  max-width: 100%;
+  max-height:100%;
+  min-height: 20vh;
+
+  /*display: block;*/
+
+}
+
+.site-header{
+  width: 100%;
+  margin: 0;
+}
+
+.tagline{
+  /*color: #B22222;*/
+}
+
+nav::after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+
+
+nav ul {
+  list-style:none;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  /*padding-top: 100px*/
+}
+
+nav li {
+  font-size: 100%;
+  font-weight: bold;
+
+  width: 100%;
+  /*max-width: 85px;*/
+  border-bottom: none;
+  display: block;
+
+
+}
+
+
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  /*padding-left: 30px;*/
+
+  color: #2F4F4F;
+  display: inline-block;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.nav-logo {
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+nav a:hover {
+  background-color: #FF8C00;
+}
+
+.hero-text{
+  display: block;
+  clear: both;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*.navbar-fixed {
+bottom: 0;
+z-index: 100;
+position: fixed;
+left:0;
+right: 0;
+width: 100%;
+background-color: transparent;
+
+}*/
+
+/* ==========================================================================
+BOOK SECTION
+========================================================================== */
+.book-title{
+  /*float: right;*/
+  /*padding-left:5em*/
+}
+
+.book-image{
+  float:left;
+  padding-right:2em;
+}
+
+.book-description {
+  float: right;
+  /*display: inline;*/
+}
+
+.videp_plh{
+  width: 100%;
+}
+/*.span_2_of_2 h3{
+text-align:center;
+background-color:#FF8C00;
+}*/
+
+/* ==========================================================================
+GRID SYSTEM
+========================================================================== */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+.span_1_of_2 {
+  width: 100%;
+}
+.span_2_of_2{
+  width: 100%;
+}
+/* ==========================================================================
+Register Section
+========================================================================== */
+.register_form{
+  width:100%;
+  padding:10px
+}
+input {
+  width: 100%;
+  display: block;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  height: 36px;
+  padding: 8px;
+  margin: 10px 0px;
+  font-size: 100%;
+}
+
+textarea#message {
+  display: block;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  height: 200px;
+  padding: 8px;
+  margin: 10px 0px;
+  font-size: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #FF8C00;
+  color: #871719;
+  font-size: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  float: right;
+  height: 40px;
+  width: 25%;
+}
+
+#map{
+  height: 100vh;
+  width:98%
+}
+
+
+/* ==========================================================================
+Footer Section
+========================================================================== */
+footer {
+  text-decoration:none;
+  background-color: #333333;
+  color: #F2F2F2;
+
+}
+
+footer a{
+  text-decoration: none;
+  color: #F2F2F2;
+}
+.footer-link{
+  text-decoration: none;
+}
+
+#privacy{
+  text-align: left;
+}
+
+
+/* =================================
+Media Queries
+==================================== */
+
+@media screen and (min-width: 994px) {
+  .span_1_of_2 {
+    width: 48.2%;
+  }
+
+  nav {
+    margin-top: 4em;
+  }
+
+  nav li {
+    width: 24.95%;
+    max-width: 85px;
+    border-bottom: none;
+    display: inline-block;
+    font-weight: 700;
+    /*align-content: center;*/
+  }
+
+
+  #map{
+    height: 100vh;
+    width:100%
+  }
+
+  #privacy{
+    text-align: right;
+  }
+
+
+}
