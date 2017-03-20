@@ -64,6 +64,7 @@ h4 {
 p {
   font-size:120%;
   line-height: 1.6;
+  /*margin-top: 1em;*/
   margin-bottom: 2em;
   font-weight: 300;
 }
@@ -115,11 +116,8 @@ button {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px 10px;
+  padding: 40px 20px;
 }
-
-
-
 
 .text-left {
   text-align: left;
@@ -133,41 +131,43 @@ button {
   text-align: center;
 }
 
+.arrow-fixed{
+  bottom:20%;
+  right: 0;
+  width: 15%;
+  height: 15%;
+  clear: both;
+  float: right;
+  position: fixed;
+  z-index: 100;
+
+}
+
+
 
 
 
 /* ==========================================================================
-HEADER 
+HEADER
 ========================================================================== */
 
 
 header {
   background-image: url(../img/book-header.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 800px 700px, cover;
+  /*background-size: cover;*/
   background-position: center;
-  /*position: relative;*/
-  margin: 0;
+  background-color: #fff;
+  margin: 0 auto;
   color: #2F4F4F;
-
   text-align: center;
-  /*min-height: 80vh;*/
   max-width: 100%;
   max-height:100%;
   min-height: 20vh;
 
-  /*display: block;*/
-
 }
 
-.site-header{
-  width: 100%;
-  margin: 0;
-}
-
-.tagline{
-  /*color: #B22222;*/
-}
 
 nav::after {
   visibility: hidden;
@@ -184,18 +184,15 @@ nav ul {
   text-align: center;
   margin: 0;
   font-weight: 700;
-  /*padding-top: 100px*/
 }
 
 nav li {
   font-size: 100%;
   font-weight: bold;
-
   width: 100%;
-  /*max-width: 85px;*/
+  max-width: 100%;
   border-bottom: none;
   display: block;
-
 
 }
 
@@ -205,12 +202,11 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  /*padding-left: 30px;*/
-
   color: #2F4F4F;
   display: inline-block;
-  padding: 12px 0;
+  padding: 12px 12px;
   text-align: center;
+
 }
 
 .nav-logo {
@@ -221,51 +217,20 @@ nav a {
 
 nav a:hover {
   background-color: #FF8C00;
+  border-radius: 25px;
 }
 
 .hero-text{
   display: block;
   clear: both;
-  text-align: center;
-  padding-top: 50px;
 }
 
-/*.navbar-fixed {
-bottom: 0;
-z-index: 100;
-position: fixed;
-left:0;
-right: 0;
-width: 100%;
-background-color: transparent;
-
-}*/
-
-/* ==========================================================================
-BOOK SECTION
-========================================================================== */
-.book-title{
-  /*float: right;*/
-  /*padding-left:5em*/
+.tagline{
+  line-height: 1.25em;
+  color: #000;
 }
 
-.book-image{
-  float:left;
-  padding-right:2em;
-}
 
-.book-description {
-  float: right;
-  /*display: inline;*/
-}
-
-.videp_plh{
-  width: 100%;
-}
-/*.span_2_of_2 h3{
-text-align:center;
-background-color:#FF8C00;
-}*/
 
 /* ==========================================================================
 GRID SYSTEM
@@ -295,6 +260,38 @@ GRID SYSTEM
 .span_2_of_2{
   width: 100%;
 }
+
+.gototop{
+  float: right;
+}
+
+#top-arrow{
+  width: 10%;
+  float: right;
+}
+
+/* ==========================================================================
+HOME  SECTION
+========================================================================== */
+
+
+.book-image{
+  float:left;
+  padding-right:2em;
+}
+
+.book-description {
+  float: right;
+  /*display: inline;*/
+}
+
+.videp_plh{
+  width: 90%;
+  /*padding: 20px;*/
+}
+
+
+
 /* ==========================================================================
 Register Section
 ========================================================================== */
@@ -349,6 +346,7 @@ footer {
   background-color: #333333;
   color: #F2F2F2;
 
+
 }
 
 footer a{
@@ -377,15 +375,22 @@ Media Queries
     margin-top: 4em;
   }
 
+  header{
+    background-size: cover;
+
+  }
+
   nav li {
     width: 24.95%;
     max-width: 85px;
     border-bottom: none;
     display: inline-block;
     font-weight: 700;
-    /*align-content: center;*/
   }
 
+  .tagline{
+    font-size: 100%;
+  }
 
   #map{
     height: 100vh;

@@ -6,11 +6,23 @@ $(document).ready(function() {
       //nav bar to stick.
       console.log($(window).scrollTop())
     if ($(window).scrollTop() > 280) {
-      $('#main-nav').addClass('navbar-fixed');
-      
+      $('#top-arrow').addClass('arrow-fixed');
+
+
     }
     if ($(window).scrollTop() < 281) {
-      $('#main-nav').removeClass('navbar-fixed');
+      $('#top-arrow').removeClass('arrow-fixed');
     }
   });
+  // $(window).scroll(function() {
+  //     if($(this).scrollTop() != 0) {
+  //         $('.gototop').fadeIn();
+  //     } else {
+  //         $('.gototop').fadeOut();
+  //     }
+  // });
+  //
+  // $('.gototop').click(function() {
+  //     $('body,html').animate({scrollTop:0},800);
+  // });
 });
