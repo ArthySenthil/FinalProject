@@ -1,21 +1,19 @@
+// Contact Form Validation
 $(document).ready(function(e) {
   $('#btnSend').click(function() {
     var sEmail = $('#email').val();
     var retVal = true;
     // Checking Empty Fields
     if ($.trim(sEmail).length == 0 || $("#name").val()=="") {
-
-      //  e.preventDefault();
       if($("#name").val()==""){
         alert('All fields are mandatory. Please enter your name.');
         $("#name").focus();
-        return false;
       }
       if($('#email').val()==""){
         alert('All fields are mandatory. Please enter your email.');
         $("#email").focus();
-        return false;
       }
+      return false;
     }
     else {
       if (validateEmail(sEmail)) {
@@ -23,19 +21,16 @@ $(document).ready(function(e) {
         if($("#message").val()==""){
           alert('Your Message is Empty!');
           $("#message").focus();
-          // e.preventDefault();
           return false;
         }
         else{
-          alert('Nice!! your Email is valid, and your message will be sent.');
+          alert('Nice!! your Email is valid, and your message is ready to be sent.');
         }
       }
       else {
         alert('Invalid Email Address');
         $("#email").focus();
-        // e.preventDefault();
         return false;
-
       }
     }
   });

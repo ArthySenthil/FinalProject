@@ -22,8 +22,7 @@ html {
 }
 
 body {
-  margin: 0;
-  /*font: 16px/1 sans-serif;*/
+  margin: 0 auto;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333333;
@@ -64,19 +63,12 @@ h4 {
 p {
   font-size:120%;
   line-height: 1.6;
-  /*margin-top: 1em;*/
   margin-bottom: 2em;
   font-weight: 300;
 }
 
 p.small-txt {
   font-size: 80%;
-}
-
-table {
-  font-size:120%;
-  line-height: 1.6;
-  font-weight: 300;
 }
 
 a,
@@ -90,7 +82,6 @@ a {
   color:#0000EE;
 }
 
-/*a:visited { color: #551A8B; }*/
 
 button {
   overflow: visible;
@@ -131,8 +122,18 @@ button {
   text-align: center;
 }
 
+.images {
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+/* ==========================================================================
+Go to Top Navigation Arrow
+========================================================================== */
+
 .arrow-fixed{
-  bottom:20%;
+  bottom:2%;
   right: 0;
   width: 15%;
   height: 15%;
@@ -143,9 +144,10 @@ button {
 
 }
 
-
-
-
+#top-arrow{
+  width: 10%;
+  float: right;
+}
 
 /* ==========================================================================
 HEADER
@@ -156,7 +158,6 @@ header {
   background-image: url(../img/book-header.png);
   background-repeat: no-repeat;
   background-size: 800px 700px, cover;
-  /*background-size: cover;*/
   background-position: center;
   background-color: #fff;
   margin: 0 auto;
@@ -230,8 +231,6 @@ nav a:hover {
   color: #000;
 }
 
-
-
 /* ==========================================================================
 GRID SYSTEM
 ========================================================================== */
@@ -261,14 +260,6 @@ GRID SYSTEM
   width: 100%;
 }
 
-.gototop{
-  float: right;
-}
-
-#top-arrow{
-  width: 10%;
-  float: right;
-}
 
 /* ==========================================================================
 HOME  SECTION
@@ -282,15 +273,12 @@ HOME  SECTION
 
 .book-description {
   float: right;
-  /*display: inline;*/
 }
 
 .videp_plh{
-  width: 90%;
-  /*padding: 20px;*/
+  width: 100%;
+  margin: 0 auto;
 }
-
-
 
 /* ==========================================================================
 Register Section
@@ -334,7 +322,8 @@ button {
 
 #map{
   height: 100vh;
-  width:98%
+  margin: 0 auto;
+  width:100%
 }
 
 
@@ -366,7 +355,9 @@ footer a{
 Media Queries
 ==================================== */
 
-@media screen and (min-width: 994px) {
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1999px){
   .span_1_of_2 {
     width: 48.2%;
   }
@@ -375,9 +366,13 @@ Media Queries
     margin-top: 4em;
   }
 
+  .arrow-fixed{
+    width: 12%;
+    height: 12%;
+  }
+
   header{
     background-size: cover;
-
   }
 
   nav li {
@@ -392,14 +387,27 @@ Media Queries
     font-size: 100%;
   }
 
-  #map{
-    height: 100vh;
-    width:100%
-  }
-
   #privacy{
     text-align: right;
   }
 
+}
+
+/* TABLETS PORTRAIT */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+  .span_1_of_2 {
+    width: 100%;
+  }
+
+
+  nav li {
+    width: 50%;
+    max-width: 95px;
+    border-bottom: none;
+    display: inline-block;
+    font-weight: 600;
+  }
 
 }
